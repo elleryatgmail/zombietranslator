@@ -1,3 +1,20 @@
+
+// Require.js configuration
+requirejs.config({
+	    baseUrl: 'js',
+        paths: {
+		          jquery: 'vendors/jquery.min',
+               bootstrap: 'vendors/bootstrap.min'
+	    },
+        "shim": {
+		                "bootstrap": ["jquery"]
+	            }
+});
+
+
+
+// 
+define(['jquery'], function($){
 $(  function(){
  
   var input= "";
@@ -244,9 +261,12 @@ $(  function(){
 
   function unzombify(){
     input= $('#zombie').val();
-    $('#english').val(input);
+    $('#english').val("Sorry, unzombification has not been implemented.");
 
   }
 
 
 });
+
+
+}); //end require.js define statement
