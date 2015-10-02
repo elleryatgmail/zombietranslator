@@ -27,4 +27,6 @@ the zombify method returned.  I use toBe() to check the zombify
 output against a literal string.
 
 
+This assignment is also available here:
+https://github.com/elleryatgmail/zombietranslator
 
