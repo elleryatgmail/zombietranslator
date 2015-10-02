@@ -2,9 +2,9 @@
 
 In addition to the 8 rules provided as part of the homework spec, I implemented two more:
 
-Rule09: Replaces occurrences of "y" or "Y" with "YY".
+**Rule09**: Replaces occurrences of "y" or "Y" with "YY".
 
-Rule10: Replaces occurrences of "q" or "Q" with "QQ".
+**Rule10**: Replaces occurrences of "q" or "Q" with "QQ".
 
 
 ##Jasmine Test Descriptions
