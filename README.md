@@ -1,11 +1,11 @@
-#Two Custom Rules
+##Two Custom Rules
 
 In addition to the 8 rules provided as part of the homework spec, I implemented two more:
 1. Replaces occurrences of "y" or "Y" with "YY".
 2. Replaces occurrences of "q" or "Q" with "QQ".
 
 
-#Jasmine Test Descriptions
+##Jasmine Test Descriptions
 As part of my Jasmine tests I used the following 3 expect methods:
 
 1. toBeTruthy().  Using this method allowed me to compare the length
