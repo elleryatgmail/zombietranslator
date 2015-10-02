@@ -1,69 +1,27 @@
-*The end is nigh!*
-But we can prepare. In this assignment we will begin preparing for the end by creating a simple zombie translator. This can be used by the living for either concealment or bartering and the living impaired will have an easier time asking for brains. 
+*Two Custom Rules*
 
-The translator can be done as a series of regular expressions (Links to an external site.) or you can step through it character by character. You get a string and you transform that string. 
+In addition the 8 rules provided as part of the homework spec, I implemented two more:
+1. Replaces occurrences of "y" or "Y" with "YY".
+2. Replaces occurrences of "q" or "Q" with "QQ".
 
-## The Rules
 
-There are some sample rules contained in the skeleton source code and are as follows:
+* Jasmine Test Descriptions *
+As part of my Jasmine tests I used the following 3 expect methods:
+1. toBeTruthy().  Using this method allowed me to compare the length
+of the input string with the length of the zombified string.  In all
+cases, the zombified string should be at least as long as the input
+string.  Since there is no greaterThanOrEqualTo(), toBeTruthy() was
+used.
 
-lower-case "r" at the end of words replaced with "rh".
-an "a" or "A" is replaced with "hra". *Edited to be easier.* 
-the starts of sentences are capitalized (the "start of a sentence" is any occurrence of ".!?", followed by a space, followed by a letter.)
-"e" or "E" is replaced by "rr"
-"i" or "I" is replaced by "rrRr"
-"o" or "O" is replaced by "rrrRr"
-"u" or "U" is replaced by "rrrrRr"
-"r" or "R" is replaced by "RR"
- 
+2. toMatch().  This method accepts a regular expression, which I
+always define to be the replacement text. For instance, since Rule
+#1 replaces /a/ with /hra/, I set the regex to /hra/.  In a word
+with 'a' or 'A', you should always be able to match /hra/.
 
-There should be 10 rules total. So make 2 rules up. ~~Each rule should be a separate function.~~ *Edited out. Unnecessary*
 
-Make use of 3 different jasmine "expect" methods per rule. http://jasmine.github.io/2.3/introduction.html (Links to an external site.) Zombies are known to be able to repeat the same statements over and over. We want to make sure the rules are not written by the undead and aren't just a list of expect(myFunc('i')).toBe('rrRr');
+3. toBe().  In the end, it's important to check exactly what string
+the zombify method returned.  I use toBe() to check the zombify
+output against a literal string.
 
-For example:
-```
-expect(30).toBe(30);
-expect(undefinedVariable).toBeUndefined();
-expect('30').toContain('0');
-expect(callback).not.toHaveBeenCalledWith(jasmine.stringMatching(/^bar$/));
-```
- 
 
-What really matters is the structure. The last thing the resistance needs is for zombies to write false translators to trick us. We need to make sure a human, professional developer created the zombie translator. We all know zombies don't know how to write modular code, and they never test. 
 
-Each of the rules needs to be modular enough to test separately. There should also be a test for the entire function. 
-
-### Rules Shouldn't Overlap
-
-Running most of these rules is going to produce some "r"s. You shouldn't be running any of the "r" rules on the r's that are produced from other rules. Yes, that sounds confusing. Here's some examples to help you out. Maybe you could write some tests with these?
-```
-Terror -> TrrRRRRrrrRrrh 
-
-JaZahn -> JhraZhrahn
-
-petty -> prrtty
-
-pretty -> pRRrrtty
-
-brains -> bRRhrarrRrns
-
-onomatopoeia  -> rrrRrnrrrRrmhratrrrRrprrrRrrrrrRrhra
-```
-
-## Starting point
-You can use this repository for a starting point: https://github.com/CSCI-E32/zombietranslator (Links to an external site.) 
-
-## Submission
-Zip up the project when you're done and submit the zip file. 
-
-## Have to use
-You have to use RequireJS and Jasmine and Karma. 
-
-Tests need to be run with Karma. Jasmine Tests. On RequireJS modules.
-
-## Extra credit 
-*20pts*
-If you correctly "unzombify" (with tests).
-
-*NOTE: not everything will unzombify perfectly. That's okay. My rules aren't perfect. Best effort on this. *
