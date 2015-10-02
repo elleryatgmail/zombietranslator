@@ -9,7 +9,7 @@ In addition to the 8 rules provided as part of the homework spec, I implemented 
 
 ##Jasmine Test Descriptions
 As part of my Jasmine tests I used the following 3 expect methods
-to test each of the 10 zombify rules.  This makes a total of 30 rules.
+to test each of the 10 zombify rules.  This makes a total of 30 tests.
 
 **1. toBeTruthy()**.  Using this method allowed me to compare the length
 of the input string with the length of the zombified string.  In all
