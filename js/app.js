@@ -1,10 +1,10 @@
 
 // Require.js configuration
 requirejs.config({
-	    baseUrl: 'js',
+	    baseUrl: 'js/app',
         paths: {
-		          jquery: 'vendors/jquery.min',
-               bootstrap: 'vendors/bootstrap.min'
+		          jquery: '../vendors/jquery.min',
+               bootstrap: '../vendors/bootstrap.min'
 	    },
         "shim": {
 		                "bootstrap": ["jquery"]
