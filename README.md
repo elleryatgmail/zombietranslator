@@ -1,11 +1,11 @@
-*Two Custom Rules*
+#Two Custom Rules
 
 In addition the 8 rules provided as part of the homework spec, I implemented two more:
 1. Replaces occurrences of "y" or "Y" with "YY".
 2. Replaces occurrences of "q" or "Q" with "QQ".
 
 
-* Jasmine Test Descriptions *
+#Jasmine Test Descriptions
 As part of my Jasmine tests I used the following 3 expect methods:
 1. toBeTruthy().  Using this method allowed me to compare the length
 of the input string with the length of the zombified string.  In all
@@ -15,7 +15,7 @@ used.
 
 2. toMatch().  This method accepts a regular expression, which I
 always define to be the replacement text. For instance, since Rule
-#1 replaces /a/ with /hra/, I set the regex to /hra/.  In a word
+\#1 replaces /a/ with /hra/, I set the regex to /hra/.  In a word
 with 'a' or 'A', you should always be able to match /hra/.
 
 
