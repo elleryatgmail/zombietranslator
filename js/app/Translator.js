@@ -184,7 +184,7 @@ define(['jquery'], function($){
    
    
    
-     // Rule #3 application
+     // Rule #3 application occurs below, after all the other rules have been applied.
      //---------------------
      // the starts of sentences are capitalized.
      // the "start of a sentence" is any occurrence of ".!?",
@@ -247,6 +247,16 @@ define(['jquery'], function($){
      // "q" or "Q" is replaced by "QQ"
      //--------------------------------
      newstr= newstr.replace(/~~~10~~~/g, "QQ");
+
+
+
+     // Rule #3 application
+     //---------------------
+     // the starts of sentences are capitalized.
+     // the "start of a sentence" is any occurrence of ".!?",
+     // followed by a space, followed by a letter.
+     //------------------------------------------------------------
+     newstr= newstr.replace(/(\.|\!|\?)(\s)+([a-z])/g, function(a){return a.toUpperCase();} );
 
 
     // return zombified text string

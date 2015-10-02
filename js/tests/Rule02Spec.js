@@ -1,7 +1,7 @@
 define(['Translator'], function(Translator){
 
-  describe('Rule01: ', function(){
-    describe('Zombify Function - replace /r$/ with /rh$/', function(){
+  describe('Rule02: ', function(){
+    describe('Zombify Function - replace /(a|A)/ with /hra/', function(){
 
 
       // initialize translator
@@ -9,7 +9,7 @@ define(['Translator'], function(Translator){
 
 
 	  // set test word
-	  var testWord= "jr";
+	  var testWord= "at";
 
 
       // test 1 of 3
@@ -20,17 +20,17 @@ define(['Translator'], function(Translator){
 
 
       // test 2 of 3
-	  it('should match /rh$/', function(){
+	  it('should match /hra/', function(){
 		var zombieText= translator.zombify(testWord);
-        expect(zombieText).toMatch(/rh$/);
+        expect(zombieText).toMatch(/hra/);
       });
 
 
 
       // test 3 of 3
-	  it('should be "jrh"', function(){
+	  it('should be "hrat"', function(){
 		var zombieText= translator.zombify(testWord);
-        expect(zombieText).toBe("jrh");
+        expect(zombieText).toBe("hrat");
       });
 
     });
