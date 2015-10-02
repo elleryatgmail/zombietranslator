@@ -1,7 +1,9 @@
 ##Two Custom Rules
 
 In addition to the 8 rules provided as part of the homework spec, I implemented two more:
+
 1. Replaces occurrences of "y" or "Y" with "YY".
+
 2. Replaces occurrences of "q" or "Q" with "QQ".
 
 
